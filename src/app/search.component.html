@@ -1,0 +1,16 @@
+<div class="text-center container-fluid" [@moveUp]="stateExpression">
+  <input class="text-center search-input" type="text" placeholder="Search Wikipedia"
+         (click)='onClick()' (blur)='onBlur()'
+         #term (keyup)="search(term.value)" (keyup)="snippet(term.value)">
+  <br />
+  <br />
+  <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="random-link" [@hideShow]="stateExp">Let's get random</a>
+
+  <div class="results-container container-fluid">
+    <div class='results' *ngFor="let item of items | async">
+      <a href="http://www.wikipedia.org/wiki/{{item}}"><h3>{{item}}</h3></a>
+    </div>
+  </div>
+
+
+</div>
