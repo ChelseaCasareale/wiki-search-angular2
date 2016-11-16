@@ -1,7 +1,7 @@
 <div class="text-center container-fluid" [@moveUp]="stateExpression">
   <input class="text-center search-input" type="text" placeholder="Search Wikipedia"
          (click)='onClick()' (blur)='onBlur()'
-         #term (keyup)="search(term.value)" (keyup)="snippet(term.value)">
+         #term (keyup)="search(term.value)">
   <br />
   <br />
   <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="random-link" [@hideShow]="stateExp">Let's get random</a>
